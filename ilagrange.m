@@ -1,10 +1,11 @@
 function [s1]=ilagrange(X,Y)% X valores de x, Y valores de y :v, 
                             %nose si los Y los dan o hay q sacarlos,
                             %revisar!
-    p1=1;
-    s1=0;
-    [n,m]=size(X);
-    for i=1:1:n
+   
+  [n,m]=size(X);
+   for i=1:1:n
+      p1=1;
+      s1=0;
         while i<=n
             if k ==i: % esta cosa va a tirar un error, corregir
                 i=i+1;
