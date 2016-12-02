@@ -1,9 +1,9 @@
-function [X1]=GaussSeidel(A,B,X,w) %A matriz ,B vector columna,w error
+function [X1]=GaussSeidel(A,B,X,e) %A matriz ,B vector columna,e error
     [n,m]=size(A);
     X1=B;% se iguala a B para dps setear los valores en casa posicion
     s1=0;
     s2=0;
-    while norm(X1-X,1)/norm(X1,1)<=w % error dado en la tarea
+    while norm(X1-X,1)/norm(X1,1)<=e % error dado en la tarea
         for k=1:1:n
             for j=(k+1):1:n%primera sumatoria
                 s1=s1+(A(k,j)*X(j));
