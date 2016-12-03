@@ -13,10 +13,14 @@ function [C]=ilagrange(X,Y)
     end
 C=Y*L;
 %http://sgpwe.izt.uam.mx/files/users/uami/jhmb/polinomiosTutorial.pdf
+% X=[2,3,7,12,22,29,36];
+%Y=[5,4,7.9,3.8,4,4.6,5]; %Auto
+%ezplot(SP,[2.0 40.0]); 
+
 %Y=0:10:60;
 %X=[0,130-122,135-122,160-122,175-122,190-122,200-122];
 %k=ilagrange(X,Y);
-%SP=poly2sym(k);
+%SP=poly2sym(k); %Represa
 %ezplot(SP,[0.0 80.0])
 C=Y*L;
 end
