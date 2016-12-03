@@ -12,6 +12,7 @@ function [C]=ilagrange(X,Y)
         L(k,:)=p1;
     end
 C=Y*L;
+%http://sgpwe.izt.uam.mx/files/users/uami/jhmb/polinomiosTutorial.pdf
 %Y=0:10:60;
 %X=[0,130-122,135-122,160-122,175-122,190-122,200-122];
 %k=ilagrange(X,Y);
