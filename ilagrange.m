@@ -11,6 +11,11 @@ function [C]=ilagrange(X,Y)
         end
         L(k,:)=p1;
     end
-
+C=Y*L;
+%Y=0:10:60;
+%X=[0,130-122,135-122,160-122,175-122,190-122,200-122];
+%k=ilagrange(X,Y);
+%SP=poly2sym(k);
+%ezplot(SP,[0.0 80.0])
 C=Y*L;
 end
