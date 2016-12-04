@@ -1,14 +1,8 @@
-% FACTORIZACION lU CHOLESKY
 
-%input es un comando de solicitud de entrada de datos del usuario.
-A=input('Ingrese la matriz A = \n');
-b=input('\nIngrese el vector b, correspondite a los terminos independientes b=\n');
-% Las matrices A y b deben ser ingresadas entre corchetes separando las
-%columnas mediante coma ',' y las filas mediante punto y coma ';'.
-
+A=input(' matriz A = \n');
+b=input('\n vector b, correspondite a los terminos independientes b=\n');
 [n,m]=size(A);
 C=[A,b];
-% la matriz C, es la forma de la matriz aumentada [Ab]
 disp(C)
 if n==m    
     for k=1:n
@@ -53,18 +47,9 @@ if n==m
         fprintf('\nEl determinante es igual a cero, por lo tanto el sistema tiene infinitas soluciones o ninguna solucion\n')
     end
 end
-    fprintf('\n Matriz Ab:\n')
-    disp(C)
-    fprintf('\n Matriz L:\n')
-    disp(L)
-    fprintf('\n Matriz U:\n')
-    disp(u)
-    fprintf('\n El vector Z:\n')
-    disp(z)
-    
+
   fprintf('\n\nLa solucion de X1 hasta Xn es:\n');  
-%a continuacion de utiliza una instruccion for, para mostrar el usuario, 
-%los resultados de una manera mas ordenada
+
 for i=1:n
     xi=x(1,i);
     fprintf('\nX%g=',i)
