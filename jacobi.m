@@ -1,12 +1,30 @@
-function [X1]=jacobi(A,B,X,e) %A matriz ,B vector columna,e error
-    [n,m]=size(A);
-    I=eye(n);
-    Q=eye(n);% Q invertida
-    for i=1:1:n
-        Q(i,i)=1/A(i,i);
-    end
-    while norm(X1-X,1)/norm(X1,1)<=e % error dado en la tarea
-        X1=(I-A*Q)*X+Q*B;
-        X=X1;
-    end
+function [X1]=jacobi(A,B,X) %A matriz ,B vector columna,w error
+[n,m]=size(A);
+X1=X;
+norma=1;
+count=0;
+while norma >= 0.000001
+        count=count+1;
+        if count == 30000
+            break
+        end
+       for i=1:n
+           s1=0;
+            for j=1:n
+                if i~=j
+                    s1=s1+A(i,j)*X(j);
+                end
+            end
+            X1(i)=((B(i)-s1)/A(i,i));
+       end
+       norma=norm(X-X1);
+       %
+       X=X1;
 end
+    
+    X1;
+    count
+    fprintf('%10.6f\n',norma);
+end
+
+
