@@ -39,6 +39,11 @@ C=[A,b];
             end
             x(i)=(z(i)-suma)/u(i,i); % solucion del calculo de las variables
         end   
-        x
     end
+end
+ fprintf('\n\nLa solucion de X1 hasta Xn es:\n');  
+for i=1:n
+    xi=x(1,i);
+    fprintf('\nX%g=',i)
+    disp(xi);
 end
