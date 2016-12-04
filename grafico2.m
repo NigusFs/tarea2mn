@@ -1,4 +1,4 @@
-function []=grafico()
+function []=grafico2()
     pp=0;
     arrn=10:60;
     arrnc=10:60;
