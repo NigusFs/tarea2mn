@@ -1,3 +1,5 @@
+%eliminacion gaussiana
+
 function y=eliminacion(A,B)
 [n n]=size(A);
 A=[A';B']';
