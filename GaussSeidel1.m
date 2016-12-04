@@ -1,4 +1,4 @@
-function [X1]=GaussSeidel1(A,B,X) %A matriz ,B vector columna,w error
+function [X1]=GaussSeidel1(A,B,X) %A matriz ,B vector columna
     [n,m]=size(A);
     I=eye(n);
     Q=inv(tril(A));% Q invertida
@@ -6,8 +6,7 @@ function [X1]=GaussSeidel1(A,B,X) %A matriz ,B vector columna,w error
     X=X';
     X1=X;
     norma=1;
-    while norma>=0.000001 % error dado en la tarea
-        
+    while norma>=0.000001
         k=k+1;
         if k == 30000
             break
